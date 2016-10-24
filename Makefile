@@ -1,11 +1,11 @@
 # http://www.sqlite.org/download.html
-SQLITE_VERSION  ?= 3080704
+SQLITE_VERSION  ?= 3150000
 SQLITE_BASENAME := sqlite-amalgamation-$(SQLITE_VERSION)
-SQLITE_URL      := http://www.sqlite.org/2014/$(SQLITE_BASENAME).zip
+SQLITE_URL      := http://www.sqlite.org/2016/$(SQLITE_BASENAME).zip
 
 # Build/Compile
 libs/armeabi/sqlite3-static: build/sqlite3.c
-	ndk-build
+	ndk-build -j2
 
 # Unpack
 build/sqlite3.c: $(SQLITE_BASENAME).zip

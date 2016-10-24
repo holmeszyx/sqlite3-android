@@ -12,6 +12,7 @@ LOCAL_SRC_FILES         := ../build/sqlite3.c
 LOCAL_C_INCLUDES        := ../build
 LOCAL_EXPORT_C_INCLUDES := ../build
 LOCAL_CFLAGS            := -DSQLITE_THREADSAFE=1
+TARGET_ARCH_ABI         := armeabi-v7a arm64-v8a
 include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
@@ -23,6 +24,7 @@ LOCAL_C_INCLUDES        := ../build
 LOCAL_EXPORT_C_INCLUDES := ../build
 LOCAL_CFLAGS            := -DSQLITE_THREADSAFE=1 -fPIE
 LOCAL_LDFLAGS           := -fPIE -pie
+TARGET_ARCH_ABI         := armeabi-v7a arm64-v8a
 include $(BUILD_EXECUTABLE)
 
 
@@ -37,6 +39,7 @@ LOCAL_SRC_FILES         := ../build/sqlite3.c
 LOCAL_C_INCLUDES        := ../build
 LOCAL_EXPORT_C_INCLUDES := ../build
 LOCAL_CFLAGS            := -DSQLITE_THREADSAFE=1
+TARGET_ARCH_ABI         := armeabi-v7a arm64-v8a
 include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
@@ -48,4 +51,5 @@ LOCAL_C_INCLUDES        := ../build
 LOCAL_EXPORT_C_INCLUDES := ../build
 LOCAL_CFLAGS            := -DSQLITE_THREADSAFE=1 -fPIE
 LOCAL_LDFLAGS           := -fPIE -pie
+TARGET_ARCH_ABI         := armeabi-v7a arm64-v8a
 include $(BUILD_EXECUTABLE)
